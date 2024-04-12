@@ -1,17 +1,20 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home.jsx";
-
+import Home from "./Pages/Home.jsx";
+import Product from "./Pages/Product.jsx";
+import Login from "./Pages/Login.jsx";
+import Navbar from "./Components/Navbar.jsx";
 
 export default function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Login/>} />
-      <Route path="/home" element={<Home/>} />
-      <Route path="/product" element={<Product/>} />
-      {/* <Route path="/home" element={<Home/>} /> */}
-    </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        {/* <Route path="/home" element={<Home/>} /> */}
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
